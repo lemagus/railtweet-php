@@ -1,0 +1,29 @@
+https://github.com/lemagus/railtweet-php
+
+Source code for Twitterbot railtweet ( @railtweet )
+Based on a slightly modified version of IRail-PHP-wrapper ( https://github.com/iRail/IRail-Php-wrapper ) and Twitteroauth https://github.com/abraham/twitteroauth
+
+All the magic happens in engine.php. 
+
+ - Depedencies :
+
+	* classes/Database.php
+	* classes/StringUtils.php
+
+	* twitteroauth.php;
+	* IRail.php;
+
+Those files are automatically included within your server include_path
+ 
+
+ - Cronjob
+ 
+The file engine.php is supposed to be run by a cronjob every minutes :
+* * * * * railtweet-php/engine.php >> railtweet-php/log/tweets.log
+
+ - Warning
+
+For obvious reasons all credentials have been removed ( databases, Twitter API Token, shortURL service )
+
+This small bot was just supposed to be a quick test of the iRail and Twitter API.
+Don't blame me for the messy dirtyness of the code ( yet )
